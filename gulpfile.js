@@ -1,20 +1,26 @@
-const { src, dest, series, watch } = require('gulp')
-const concat = require('gulp-concat')
-const htmlMin = require('gulp-htmlmin')
-const autoPrefixer = require('gulp-autoprefixer')
-const sass = require('gulp-sass')(require('node-sass'))
-const cleanCSS = require('gulp-clean-css')
-const svgSprite = require('gulp-svg-sprite')
-const imagemin = require('gulp-imagemin')
+const { src, dest, series, watch } = require('gulp');
+const concat = require('gulp-concat');
+const htmlMin = require('gulp-htmlmin');
+const autoPrefixer = require('gulp-autoprefixer');
+const sass = require('gulp-sass')(require('node-sass'));
+const cleanCSS = require('gulp-clean-css');
+const svgSprite = require('gulp-svg-sprite');
+const imagemin = require('gulp-imagemin');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
-const uglify = require('gulp-uglify-es').default
-const babel = require('gulp-babel')
-const notify = require('gulp-notify')
-const sourcemaps = require('gulp-sourcemaps')
-const del = require('del')
-const browserSync = require('browser-sync').create()
+const uglify = require('gulp-uglify-es').default;
+const babel = require('gulp-babel');
+const notify = require('gulp-notify');
+const sourcemaps = require('gulp-sourcemaps');
+const del = require('del');
+const browserSync = require('browser-sync').create();
+var gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
 
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
+});
 
 const clean = () => {
     return del(['dist'])
