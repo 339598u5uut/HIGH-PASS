@@ -1,0 +1,302 @@
+@import 'global.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+.section-projects {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 30px;
+        padding-bottom: 73px;
+        width: 100%;
+    }
+    &__h3 {
+        @include h3();
+        margin-bottom: 10px;
+        padding-top: 68px;
+    }
+    &__item-h3 {
+        @include h3();
+        line-height: 1em;
+        margin-bottom: 5px;
+    }
+    &__item1,
+    &__item2,
+    &__item3,
+    &__item4-add1024,
+    &__item5,
+    &__item6,
+    &__item7,
+    &__item8 {
+        position: relative;
+    }
+    &__hashtag {
+        @include hashtag();
+        top: 7px;
+        right: 7px;
+        z-index: 3;
+    }
+    &__paragraph {
+        margin-bottom: 15px;
+    }
+    .small-card {
+        grid-column: span 2;
+        padding-bottom: 20px;
+        min-height: 184px;
+    }
+    .big-card {
+        display: flex;
+        grid-column: span 6;
+        min-height: 300px;
+    }
+    .medium-card {
+        grid-column: span 3;
+        padding-bottom: 20px;
+        min-height: 184px;
+    }
+    &__item1 {
+        grid-row-start: 1;
+    }
+    &__item2 {
+        grid-row-start: 1;
+    }
+    &__item3 {
+        grid-row-start: 1;
+    }
+    &__item4-add1024 {
+        display: none;
+    }
+    &__item5 {
+        grid-row-start: 1;
+    }
+    &__item6 {
+        grid-row-start: 2;
+    }
+    &__item-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 278px;
+        padding: 27px 10px 30px 30px;
+        width: 50%;
+        color: white;
+        z-index: 100;
+    }
+    &__item7 {
+        grid-row-start: 2;
+    }
+    &__item8 {
+        grid-row-start: 2;
+    }
+    &__item-paragraph {
+        line-height: 22px;
+    }
+    &__img {
+        margin-bottom: 10px;
+    }
+    &__img_long {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.description-white {
+    margin-bottom: 8px;
+    @include description();
+    background-image: url('../images/calendar-white.png');
+}
+
+.description-grey {
+    position: absolute;
+    @include description();
+    color: #999999;
+    background-image: url('../images/calendar-grey.png');
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .section-projects {
+        &__container {
+            padding-bottom: 70px;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+        &__item1 {
+            grid-row-start: 1;
+        }
+        &__item2 {
+            grid-row-start: 1;
+        }
+        &__item3 {
+            grid-row-start: 1;
+        }
+        &__item4-add1024 {
+            display: block;
+            grid-row-start: 1;
+        }
+        &__item5 {
+            grid-row-start: 2;
+        }
+        &__item6 {
+            grid-row-start: 3;
+            order: 9;
+        }
+        &__item7 {
+            grid-row-start: 2;
+        }
+        &__item8 {
+            grid-row-start: 3;
+        }
+        &__item-paragraph {
+            margin-bottom: 10px;
+        }
+        &__img {
+            margin-bottom: 15px;
+        }
+        &__img_long {
+            height: 100%;
+        }
+        &__h3 {
+            margin-bottom: 12px;
+        }
+        .big-card {
+            grid-column: span 5;
+        }
+    }
+}
+
+@media (min-width:581px) and (max-width:768px) {
+    .section-projects {
+        &__container {
+            grid-template-rows: repeat(4, auto);
+            padding-bottom: 70px;
+        }
+        &__item1 {
+            grid-row-start: 1;
+        }
+        &__item2 {
+            grid-row-start: 1;
+        }
+        &__item3 {
+            grid-row-start: 1;
+        }
+        &__item5 {
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        &__item6 {
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+        &__item7 {
+            grid-row-start: 3;
+        }
+        &__item8 {
+            grid-row-start: 3;
+        }
+        &__item-paragraph {
+            margin-bottom: 5px;
+        }
+        &__h3 {
+            padding-top: 72px;
+            margin-bottom: 12px;
+        }
+        &__img {
+            margin-bottom: 15px;
+        }
+        &__img_long {
+            min-height: 300px;
+        }
+        .small-card {
+            grid-column: span 4;
+        }
+        .big-card {
+            grid-column: span 12;
+        }
+        .medium-card {
+            grid-column: span 6;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .section-projects {
+        &__container {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(7, auto);
+            gap: 30px;
+            padding-bottom: 30px;
+        }
+        &__item1 {
+            grid-row-start: 1;
+        }
+        &__item2 {
+            grid-row-start: 2;
+        }
+        &__item3 {
+            grid-row-start: 3;
+        }
+        &__item5 {
+            grid-row-start: 4;
+        }
+        &__item6 {
+            grid-row-start: 8;
+            transform: translateY(-30px);
+        }
+        &__item7 {
+            grid-row-start: 5;
+        }
+        &__item8 {
+            grid-row-start: 6;
+        }
+        &__img {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        &__item-content {
+            justify-content: flex-end;
+            padding: 80px 10px 30px 28px;
+            width: 80%;
+        }
+        &__paragraph {
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__paragraph br {
+            display: none;
+        }
+        &__item-paragraph {
+            margin-bottom: 7px;
+        }
+        &__item-h3 {
+            margin-bottom: 12px;
+        }
+        &__item-h3 br {
+            display: none;
+        }
+        &__h3 {
+            margin-bottom: 10px;
+            padding-top: 48px;
+            font-size: 18px;
+        }
+        &__hashtag {
+            right: 5px;
+            font-size: 12px;
+            padding: 4px 14px;
+        }
+        .small-card,
+        .medium-card,
+        .big-card {
+            grid-column: auto;
+        }
+        .big-card {
+            min-height: 422px;
+        }
+    }
+}

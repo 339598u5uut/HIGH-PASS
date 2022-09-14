@@ -1,0 +1,133 @@
+@import 'global.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+.footer {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        line-height: 22px;
+        width: 100%;
+        color: #CACACA;
+    }
+    &__logo {
+        max-width: 190px;
+    }
+    &__logo-320 {
+        display: none;
+    }
+    &__right-social {
+        max-width: 161px;
+    }
+    &__social {
+        display: grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        grid-template-columns: repeat(3, 30px);
+        justify-items: end;
+        align-items: center;
+        padding-left: 13px;
+        &-link svg {
+            fill: #CACACA;
+            transition: fill .3s ease-in-out;
+        }
+        &-link:hover svg {
+            fill: $orangeColor;
+        }
+        &-link:focus svg {
+            fill: $brownColor;
+        }
+        &-link:active svg {
+            fill: $darkOrangeColor;
+        }
+    }
+    &__paragraph-left {
+        padding-top: 6px;
+        font-family: 'TT Firs Neue';
+        font-size: 14px;
+        line-height: 1em;
+        font-weight: 400;
+        color: #E9E9E9;
+    }
+    &__left {
+        max-width: 263px;
+    }
+    &__middle {
+        max-width: 361px;
+    }
+    &__paragraph-middle-copy {
+        color: #666666;
+    }
+    &__paragraph-right {
+        margin-bottom: 8px;
+        text-align: right;
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .footer {
+        &__paragraph-right {
+            margin-bottom: 8px;
+        }
+        &__logo {
+            max-width: 166px;
+        }
+    }
+}
+
+@media (min-width:581px) and (max-width:768px) {
+    .footer {
+        &__container {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+        &__middle {
+            display: none;
+        }
+        &__logo {
+            max-width: 166px;
+        }
+        .footer {
+            &__paragraph-right {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .footer {
+        &__container {
+            position: relative;
+            padding-top: 28px;
+            height: 123px;
+            justify-content: center;
+        }
+        &__middle {
+            display: none;
+        }
+        &__div-for-320 {
+            display: block;
+            width: 100%;
+            background-color: #4A4A4A;
+            height: 62px;
+        }
+        &__logo {
+            display: none;
+        }
+        &__logo-320 {
+            padding-top: 14px;
+            display: block;
+            text-align: center;
+        }
+        &__paragraph-left {
+            position: absolute;
+            bottom: -50px;
+            font-size: 10px;
+            line-height: 1em;
+        }
+        &__paragraph-right {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../node_modules/normalize-scss/sass/normalize';
+@include normalize();
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'global.scss';
+@import 'header.scss';
+@import 'section-work.scss';
+@import 'section-about.scss';
+@import 'section-projects.scss';
+@import 'section-contacts.scss';
+@import 'footer.scss';

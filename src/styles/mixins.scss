@@ -1,0 +1,127 @@
+@mixin ttfirsNeueRegular {
+    @font-face {
+        font-family: 'TT Firs Neue';
+        src: local('TT Firs Neue Regular'), url('../font/TTFirsNeue-Regular.woff2') format('woff2'), url('../font/TTFirsNeue-Regular.woff') format('woff');
+        font-display: swap;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+@mixin ttfirsNeueMedium {
+    @font-face {
+        font-family: 'TT Firs Neue';
+        src: local('TT Firs Neue Medium'), url('../font/TTFirsNeue-Medium.woff2') format('woff2'), url('../font/TTFirsNeue-Medium.woff') format('woff');
+        font-display: swap;
+        font-weight: 500;
+        font-style: normal;
+    }
+}
+
+@mixin ttfirsNeueBold {
+    @font-face {
+        font-family: 'TT Firs Neue';
+        src: local('TT Firs Neue Bold'), url('../font/TTFirsNeue-Bold.woff2') format('woff2'), url('../font/TTFirsNeue-Bold.woff') format('woff');
+        font-display: swap;
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+@mixin robotoBold {
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../font/Roboto-bold.woff2') format('woff2'), url('../font/Roboto-bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+@mixin robotoMedium {
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../font/Roboto-medium.woff2') format('woff2'), url('../font/Roboto-medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+    }
+}
+
+@mixin robotoRegular {
+    @font-face {
+        font-family: 'Roboto';
+        src: url('../font/Roboto-regular.woff2') format('woff2'), url('../font/Roboto-regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+@mixin container-xl {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@mixin container-lg {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@mixin container-md {
+    max-width: 768px;
+    margin: 0 auto;
+    padding-left: 27px;
+    padding-right: 27px;
+}
+
+@mixin container-xs {
+    max-width: 620px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@mixin h3 {
+    font-family: 'TT Firs Neue';
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+@mixin form-h4 {
+    font-family: 'TT Firs Neue';
+    font-size: 24px;
+    line-height: 1em;
+    font-weight: 400;
+}
+
+@mixin btnPrimary {
+    background-color: #FF6E30;
+}
+
+@mixin btnSecondary {
+    border: 3px solid #FF6E30;
+}
+
+@mixin hashtag {
+    position: absolute;
+    padding: 6px 14px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1em;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #333333;
+}
+
+@mixin description {
+    bottom: 0;
+    padding-left: 15px;
+    font-size: 12px;
+    line-height: 1em;
+    font-weight: 400;
+    background-repeat: no-repeat;
+    background-position: left;
+}

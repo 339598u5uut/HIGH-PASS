@@ -1,0 +1,39 @@
+{
+    "name": "8",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "homepage": "https://339598u5uut.github.io/HIGH-PASS/",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "me",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.15.5",
+        "@babel/preset-env": "^7.15.6",
+        "babel-loader": "^8.2.2",
+        "browser-sync": "^2.27.5",
+        "del": "^6.0.0",
+        "gsap": "^3.8.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-cli": "^2.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-notify": "^4.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^5.0.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-svg-sprite": "^1.5.0",
+        "gulp-uglify-es": "^3.0.0",
+        "just-validate": "^1.5.0",
+        "node-sass": "^6.0.1",
+        "normalize-scss": "^7.0.1",
+        "webpack": "^4.43.0",
+        "webpack-stream": "^5.2.1"
+    }
+}

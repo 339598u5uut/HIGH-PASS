@@ -1,0 +1,167 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@include ttfirsNeueRegular();
+@include ttfirsNeueMedium();
+@include ttfirsNeueBold();
+@include robotoBold();
+@include robotoMedium();
+@include robotoRegular();
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+h2,
+h3,
+h4,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea {
+    padding: 0;
+    border: none;
+    border-style: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.container {
+    @include container-xl();
+}
+
+.container-fluid {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    background-color: $mainColor;
+}
+
+.btn {
+    padding: 15px 22px;
+    border: none;
+    font-weight: 700;
+    line-height: 1em;
+    min-width: 121px;
+    text-align: center;
+    color: #ffffff;
+    background-color: transparent;
+    transition: background-color .3s ease-in-out;
+}
+
+.btnPrimary {
+    @include btnPrimary();
+    &:hover {
+        background-color: $brownColor;
+    }
+    &:focus {
+        outline: 3px solid #CE4307;
+        background-color: $orangeColor;
+    }
+    &:active {
+        background-color: $darkOrangeColor;
+    }
+}
+
+.btnSecondary {
+    @include btnSecondary();
+    &:hover {
+        background-color: $orangeColor;
+    }
+    &:focus {
+        outline: 3px solid $orangeColor;
+        background-color: $brownColor;
+    }
+    &:active {
+        background-color: $darkOrangeColor;
+    }
+}
+
+input[type=search] {
+    transition: color .3s ease-in-out;
+}
+
+input[type=text],
+input[type=email] {
+    color: #999999;
+    &::placeholder,
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1em;
+        font-family: 'Roboto', sans-serif;
+        color: #999999;
+        transition: color .3s ease-in-out;
+    }
+    &:hover::placeholder,
+    &:hover::placeholder {
+        color: $orangeColor;
+    }
+    &:focus,
+    &:focus {
+        outline: 1px solid $orangeColor;
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .container {
+        @include container-lg();
+    }
+}
+
+@media (min-width:581px) and (max-width:768px) {
+    .container-fluid {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .container {
+        @include container-md();
+    }
+}
+
+@media (max-width: 580px) {
+    .container-fluid {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .container {
+        @include container-xs();
+    }
+    .btn {
+        font-size: 14px;
+    }
+    .btnPrimary {
+        padding: 12px 22px;
+    }
+    .btnSecondary {
+        padding: 12px 16px;
+    }
+}

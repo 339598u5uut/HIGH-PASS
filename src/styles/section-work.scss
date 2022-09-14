@@ -1,0 +1,185 @@
+@import 'global.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+.section-work {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding-top: 36px;
+        padding-bottom: 70px;
+        color: #ffffff;
+        width: 100%;
+    }
+    &__item {
+        position: relative;
+        &_big {
+            min-height: 300px;
+            grid-column: span 2;
+        }
+        &_small {
+            min-height: 257px;
+        }
+    }
+    &__item1 {
+        position: relative;
+        display: flex;
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    &__item1-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        position: relative;
+        padding: 60px 20px 60px 60px;
+    }
+    &__item1-content-paragraph {
+        margin-bottom: 3px;
+        line-height: 19px;
+    }
+    &__item1-content-h2 {
+        margin-bottom: 19px;
+        font-family: 'TT Firs Neue';
+        font-size: 36px;
+        line-height: 37px;
+        font-weight: 700;
+    }
+    &__right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    &__item2-content-h3 br {
+        display: none;
+    }
+    &__item2-content-h3 {
+        margin-bottom: 21px;
+        @include h3();
+        color: $mainColor;
+        line-height: 1em;
+        letter-spacing: -2px;
+    }
+    &__hashtag {
+        top: 15px;
+        right: 15px;
+        @include hashtag();
+        z-index: 3;
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .section-work {
+        &__container {
+            padding-top: 40px;
+        }
+        &__item1-content {
+            padding: 60px 20px 30px 28px;
+        }
+        &__item1-content-h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+        &__item_big {
+            min-height: 332px;
+        }
+        &__item_small {
+            min-height: 186px;
+        }
+        &__item2-content-h3 br {
+            display: block;
+        }
+        &__img_1 {
+            min-height: 616px;
+        }
+    }
+}
+
+@media (min-width:581px) and (max-width:768px) {
+    .section-work {
+        &__container {
+            padding-top: 34px;
+        }
+        &__img_1 {
+            min-height: 452px;
+        }
+        &__item_big {
+            min-height: 228px;
+        }
+        &__item_small {
+            min-height: 133px;
+        }
+        &__item1-content {
+            padding: 60px 20px 30px 28px;
+            width: 100%;
+        }
+        &__item1-content-h2 {
+            padding-bottom: 0;
+            font-size: 34px;
+            line-height: 30px;
+        }
+        &__item2-content-h3 {
+            font-size: 21px;
+        }
+        &__item1-content-paragraph {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .section-work {
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 35px;
+            padding-top: 30px;
+            padding-bottom: 50px;
+            color: #ffffff;
+        }
+        &__item1 {
+            min-height: 422px;
+        }
+        &__item1-content {
+            padding: 60px 20px 30px 28px;
+        }
+        &__item1-content-paragraph {
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1em;
+            width: 100%;
+        }
+        &__item1-content-h2 {
+            margin-bottom: 14px;
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: 700;
+            width: 100%;
+        }
+        &__item_big {
+            min-height: 186px;
+        }
+        &__item_small {
+            min-height: 105px;
+        }
+        &__item2-content-h3 {
+            margin-bottom: 16px;
+            font-size: 18px;
+            width: 100%;
+            letter-spacing: -1px;
+        }
+        &__hashtag {
+            padding: 4px 7px;
+            font-size: 12px;
+            top: 5px;
+            right: 6px;
+        }
+    }
+}
