@@ -14,13 +14,9 @@ const notify = require('gulp-notify');
 const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
 const browserSync = require('browser-sync').create();
-var gulp = require('gulp');
-const ghPages = require('gulp-gh-pages');
+const ghPages = require('gh-pages');
+const path = require('path');
 
-gulp.task('deploy', function() {
-    return gulp.src('./dist/**/*')
-        .pipe(ghPages());
-});
 
 const clean = () => {
     return del(['dist'])
@@ -199,8 +195,11 @@ watch('src/styles/**/*.scss', stylesDev)
 watch('src/js/**/*.js', scriptsDev)
 watch('src/images', imagesDev)
 
+function deploy(cb) {
+    ghPages.publish(path.join(process.cwd(), './dist'), cb);
+}
 
-
+exports.deploy = deploy;
 exports.styles = styles
 exports.scripts = scripts
 exports.htmlMinify = htmlMinify
